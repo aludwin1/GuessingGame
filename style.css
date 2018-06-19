@@ -1,6 +1,7 @@
-.center {
-  text-align: center;
+html {
+  box-sizing: 'border-box';
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -10,6 +11,11 @@ img {
     width: 200px;
     height: 100px;
 }
+
+.center {
+  text-align: center;
+}
+
 #footer {
     width: 100%;
     border-top: solid 2px black;
@@ -17,3 +23,11 @@ img {
     position: fixed;
     bottom: 0;
 }
+
+#input-parent {
+  width: 160px;
+  margin: 0 auto 0 auto;
+}
+
+
+
