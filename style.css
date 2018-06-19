@@ -16,6 +16,20 @@ img {
   text-align: center;
 }
 
+
+.guess {
+  font-size: 60px;
+  display: inline;
+  border-radius: 10%;
+  margin: 5px;
+  padding: 0px 25px;
+  border: solid 1px black;
+}
+
+#guesses {
+  margin: 10px;
+}
+
 #footer {
     width: 100%;
     border-top: solid 2px black;
