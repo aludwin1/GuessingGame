@@ -18,6 +18,10 @@ function Game() {
   this.winningNumber = generateWinningNumber();
 }
 
+function newGame() {
+  return new Game();
+};
+
 Game.prototype.difference = function() {
   return Math.abs(this.winningNumber - this.playersGuess);
 };
@@ -44,10 +48,6 @@ Game.prototype.playersGuessSubmission = function(num) {
   if(num < 1 || num > 100 || typeof num !== 'number') throw 'That is an invalid guess.';
   this.playersGuess = num;
   return this.checkGuess(num);
-};
-
-function newGame() {
-  return new Game();
 };
 
 Game.prototype.provideHint = function() {
