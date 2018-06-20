@@ -14,9 +14,9 @@ ul {
     padding: 0;
 }
 img {
-    display: inline;
-    width: 310px;
-    height: 75px;
+  display: inline;
+  /* width: 310px;
+  height: 75px; */
 }
 
 .center {
@@ -54,6 +54,7 @@ img {
   top: 20px;
   left: 115px;
   border-radius: 50%;
+  box-shadow: 1px 1px 1px rgb(153, 177, 223);
   position: absolute;
 }
 
@@ -77,7 +78,20 @@ img {
 }
 
 #name {
-  top: 10px;
   position: relative;
-  font-size: 30px;
+  top: 0.8em;
+  font-size: 3vw;
+}
+
+#Reset {
+  box-shadow: 1px 1px 1px rgb(230, 182, 173);
+}
+
+#Hint {
+  box-shadow: 1px 1px 1px rgb(233, 246, 250);
+}
+
+#gracehopper {
+  position: relative;
+  top: 1em;
 }
