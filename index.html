@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <title>Guessing Game</title>
-    <link rel='stylesheet' text='text/css' href='Styles/style.css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Bootstrap and CSS here-->
-  </head>
-  <body>
 
-      <div id='app' class='container center'>
+<head>
+  <title>Guessing Game</title>
+  <link rel='stylesheet' text='text/css' href='Styles/style.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
 
-        <div id='headers'>
-          <h1>Play the Guessing Game!</h1>
-          <h4>Guess a number between 1-100!</h2>
-        </div>
-
-        <div id='main'>
-          <div id='input-parent'>
-            <input id='player-input' placeholder='#' maxlength='3' autofocus=autofocus></input>
-            <button id='submit' class='btn btn-primary'>Go!</button>
-          </div>
-
-          <div id='guesses'>
-            <ul id='guess-list'>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-            </ul>
-          </div>
-
-          <div id='menu-btns'>
-            <button id='Reset' class='btn btn-danger'>Reset</button>
-            <button id='Hint'class='btn btn-info'>Hint</button>
-          </div>
-        </div>
+<body>
+  <div id='app' class='container center'>
+    <div id='headers'>
+      <h1>Play the Guessing Game!</h1>
+      <h4>Guess a number between 1-100!</h2>
+    </div>
+    <div id='main'>
+      <div id='input-parent'>
+        <input id='player-input' placeholder='#' maxlength='3' autofocus=autofocus></input>
+        <button id='submit' class='btn btn-primary'>Go!</button>
+      </div>
+      <div id='guesses'>
+        <ul id='guess-list'>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+        </ul>
+      </div>
+      <div id='menu-btns'>
+        <button id='Reset' class='btn btn-danger'>Reset</button>
+        <button id='Hint' class='btn btn-info'>Hint</button>
+      </div>
+    </div>
+  </div>
+  <div id='footer' class='center'>
+    <div class='col-sm-12'>
+      <div class='col-sm-4' id='fullstack'>
+        <img src="Images/fa-logo@2x.png" class='img-responsive center-block'>
       </div>
 
+      <div class='col-sm-4'>
+        <h4 id='name'>Aaron Ludwin</h4>
+      </div>
 
-
-    <div id='footer' class='center'>
-        <div class='col-sm-12'>
-          <div class='col-sm-4' id='fullstack'>
-            <img src="Images/fa-logo@2x.png" class='img-responsive center-block'>
-          </div>
-
-          <div class='col-sm-4'>
-            <h4 id='name'>Aaron Ludwin</h4>
-          </div>
-
-          <div class='col-sm-4' id='gracehopper'>
-            <img src="Images/grace_hopper_academy.png" class='img-responsive center-block'>
-          </div>
-
-
-        </div>
+      <div class='col-sm-4' id='gracehopper'>
+        <img src="Images/grace_hopper_academy.png" class='img-responsive center-block'>
+      </div>
     </div>
+  </div>
+</body>
 
-  </body>
 </html>
