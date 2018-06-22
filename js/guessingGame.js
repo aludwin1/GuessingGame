@@ -32,7 +32,10 @@ Game.prototype.isLower = function() {
 };
 
 Game.prototype.checkGuess = function(num) {
-  if (num === this.winningNumber) return 'You Win!';
+  if (num === this.winningNumber) {
+    this.pastGuesses.push(num);
+    return 'You Win!';
+  }
   else if (this.pastGuesses.length === 4) {
     this.pastGuesses.push(num);
     return 'You Lose.';
