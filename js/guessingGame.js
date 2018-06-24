@@ -83,21 +83,6 @@ $(document).ready(function() {
     }
   }
 
-  function reset() {
-    game = newGame();
-    $('h1').text('Play the Guessing Game!');
-    $('h4').text('Guess a number between 1-100!');
-    $('#player-input').val('');
-    $('li').text('-');
-    $('#Hint, #submit').prop('disabled', false);
-  }
-
-  function hint() {
-    const hints = game.provideHint();
-    let hintText = `The winning number is either ${hints[0]}, ${hints[1]}, or ${hints[2]}`;
-    $('h1').text(hintText);
-  }
-
   $('#submit').click(function() {
     guess();
   });
@@ -107,10 +92,17 @@ $(document).ready(function() {
   });
 
   $('#Reset').click(function(){
-    reset();
+    game = newGame();
+    $('h1').text('Play the Guessing Game!');
+    $('h4').text('Guess a number between 1-100!');
+    $('#player-input').val('');
+    $('li').text('-');
+    $('#Hint, #submit').prop('disabled', false);
   });
 
   $('#Hint').click(function(){
-    hint();
+    const hints = game.provideHint();
+    let hintText = `The winning number is either ${hints[0]}, ${hints[1]}, or ${hints[2]}`;
+    $('h1').text(hintText);
   });
 });
