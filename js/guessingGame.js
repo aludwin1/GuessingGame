@@ -76,6 +76,7 @@ $(document).ready(function() {
       $('h1').text(output);
       $('li').eq(game.pastGuesses.length - 1).text(input);
       $('h4').text('Click the reset button to play again!');
+      $('#Hint, #submit').prop('disabled', true);
     } else {
       $('li').eq(game.pastGuesses.length - 1).text(input);
       $('h1').text(output);
@@ -88,17 +89,28 @@ $(document).ready(function() {
     $('h4').text('Guess a number between 1-100!');
     $('#player-input').val('');
     $('li').text('-');
+    $('#Hint, #submit').prop('disabled', false);
+  }
+
+  function hint() {
+    const hints = game.provideHint();
+    let hintText = `The winning number is either ${hints[0]}, ${hints[1]}, or ${hints[2]}`;
+    $('h1').text(hintText);
   }
 
   $('#submit').click(function() {
     guess();
   });
 
+  $('#player-input').keypress(function(event) {
+    if(event.which === 13) guess();
+  });
+
   $('#Reset').click(function(){
     reset();
   });
 
-  $('#player-input').keypress(function(event) {
-    if(event.which === 13) guess();
+  $('#Hint').click(function(){
+    hint();
   });
 });
