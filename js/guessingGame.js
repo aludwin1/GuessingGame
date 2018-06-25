@@ -71,15 +71,23 @@ $(document).ready(function() {
   function guess() {
     const input = Number($('#player-input').val());
     const output = game.playersGuessSubmission(input);
-    if(output === 'You have already guessed that number.') $('h1').text('Guess Again!');
+    if(output === 'You have already guessed that number.') {
+      $('h1').text('Guess Again!');
+      $('#player-input').val('');
+    }
     else if(output === 'You Lose.' || output === 'You Win!') {
       $('h1').text(output);
       $('li').eq(game.pastGuesses.length - 1).text(input);
+      $('#player-input').val('');
       $('h4').text('Click the reset button to play again!');
       $('#Hint, #submit').prop('disabled', true);
+    } else if(output === 'That is an invalid guess.'){
+      $('h1').text(output);
+      $('#player-input').val('');
     } else {
       $('li').eq(game.pastGuesses.length - 1).text(input);
       $('h1').text(output);
+      $('#player-input').val('');
     }
   }
 
